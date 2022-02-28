@@ -59,10 +59,11 @@ body {
   float: left;
 }
 
-.grid-container > div {
+.image2 {
   display: inline-block;
   margin: 0px ;
   width: 250px;
+  height: 250px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   position: relative;
   top: 30px;
@@ -76,8 +77,8 @@ body {
 .grid-container {
   display: grid;
   justify-content: space-evenly;
-  grid-template-columns: 250px 250px; /*Make the grid smaller than the container*/
-  gap: 0px;
+  grid-template-columns: auto auto; /*Make the grid smaller than the container*/
+  gap: 20px;
   padding: 0px;
 }
 
@@ -105,5 +106,3 @@ body {
 
 </body>
 </html>
-
-

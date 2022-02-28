@@ -2,96 +2,106 @@
 <html>
 <head>
 <style>
-  
-h1 {
-  color: black;
-  font-family: Arial, sans-serif;
-  margin: 20px 19px;
-  font-size: 20px;
-  position: relative;
-  top: 0px;
-  float: left;
 
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  margin: 10px 0px;
 }
-  
-  
-.button {
-  border: none;
-  border-radius: 0px;
-  padding: 10px 0px;
-  text-align: center;
-  text-decoration: none;
-  font-weight: bold;
-  font-family: Arial, sans-serif;
-  font-size: 15px;
-  margin: 0px 3px;
-  cursor: pointer;
-  transition-duration: 0.2s;
-  position: relative;
-  top: 10px;
+
+li {
   float: right;
 }
 
-.button:hover {
-  background-color: #58a179;
-}
-
-.button1 {
-  background-color: seagreen; 
-  color: white; 
-  width: 100px;
+li a {
+  display: block;
+  margin: 0px 3px;
   border: 3px solid black;
-}
-
-.button2 {
-  background-color: seagreen; 
-  color: white; 
-  width: 100px;
-  border: 3px solid black;
-}
-
-.button3 {
-  background-color: seagreen; 
-  color: white; 
-  width: 100px;
-  border: 3px solid black;
-}
-
-.button4 {
   background-color: seagreen;
   color: white;
-  width: 100px;
-  border: 3px solid white;
+  font-weight: bold;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  padding: 10px 0px;
+  text-decoration: none;
+  width:97px;
+  transition-duration: 0.2s;
 }
 
-img {
-  display: block;
-  margin: 0px 5px;
-  width: 80px;
-  position: relative;
-  top: 4px;
-  float: left;
+li a:hover:not(.active) {
+  background-color: #58a179;
+  color: white;
+}
+
+a:hover.active {
+  color: white;
+}
+
+.active {
+  background-color: seagreen;
+  border: 3px solid white;
+  
 }
 
 body {
   background-color: rgb(87, 87, 87);
 }
-  
+
+.image {
+  display: block;
+  margin: 0px 5px;
+  width: 80px;
+  position: relative;
+  top: 0px;
+  float: left;
+}
+
+.grid-container > div {
+  display: inline-block;
+  margin: 0px ;
+  width: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  position: relative;
+  top: 30px;
+}
+
+.image2:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  transition: 0.3s; 
+}
+
+.grid-container {
+  display: grid;
+  justify-content: space-evenly;
+  grid-template-columns: 250px 250px; /*Make the grid smaller than the container*/
+  gap: 0px;
+  padding: 0px;
+}
+
 </style>
 
-  <title>BPE</title>
-  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-  
+
+<title>BPE</title>
+<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
 </head>
 <body>
 
-<a href="index.html"><img src="images/BPE Logo PNG.png" alt="BPE Logo"></a>
-<a href="contact.html"><button class="button button1">Contact</button></a>
-<a href="tutorials.html"><button class="button button2">Tutorials</button></a>
-<a href="projects.html"><button class="button button3">Projects</button></a>
-<a href="index.html"><button class="button button4">Home</button></a>
+<ul>
+  <a href="index.html"><img class="image" src="images/BPE Logo PNG.png" alt="BPE Logo"></a>
+  <li><a href="contact.html">Contact</a></li>
+  <li><a href="tutorials.html">Tutorials</a></li>
+  <li><a href="projects.html">Projects</a></li>
+  <li><a class="active" href="index.html">Home</a></li>
+</ul>
 
-
+<div class="grid-container">
+    <div><a href="index.html"><img class="image2" src="images/test.jpg" alt="BPE Logo"></a></div>
+    <div><a href="index.html"><img class="image2" src="images/test.jpg" alt="BPE Logo"></a></div>
+  </div>
 
 </body>
 </html>

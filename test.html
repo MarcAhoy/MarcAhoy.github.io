@@ -61,6 +61,9 @@ body {
 
 input[type=text], select {
   font-family: Arial, sans-serif;
+  font-size: 15px;
+  background-color: white;
+  color: black;
   width: 500px;
   padding: 12px 20px;
   margin: 8px 0;
@@ -74,7 +77,7 @@ label{
   color: black;
   font-weight: bold;
   font-family: Arial, sans-serif;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 textarea {
@@ -85,7 +88,9 @@ textarea {
   box-sizing: border-box;
   border: 1px solid black;
   border-radius: 4px;
-  background-color: #f8f8f8;
+  background-color: white;
+  font-family: Arial, sans-serif;
+  color: black;
   font-size: 16px;
   resize: none;
 }
@@ -113,7 +118,7 @@ input[type=submit]:hover {
 }
 
 div {
-  border-radius: 5px;
+  border-radius: 10px;
   background-color: #c5c5c5;
   padding: 20px;
   width: 500px;
@@ -140,26 +145,27 @@ div {
 <center>
   <div>
     <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSesy4uxHnmwIpxVzuNdgXWzE5BjIXcOEuPGqhiOthqtCS3JZA/formResponse?usp=sf_link" target="hidden_iframe" onsubmit="submitted=true;">
-      <label for="fname">First Name</label>
-      <input type="text" id="entry.756196463" name="entry.756196463" placeholder="Your name..">
+      <label for="name">Name</label>
+      <input type="text" id="entry.756196463" name="entry.756196463">
   
-      <label for="lname">Subject</label>
+      <label for="name">Subject</label>
+      <input type="text" id="entry.1780240798" name="entry.1780240798">
+
+      <label for="lname">Message</label>
       <textarea id="entry.1032608724" name="entry.1032608724"></textarea>
   
       <input type="submit" value="Submit">
     </form>
-
 <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
 <script type="text/javascript">var submitted=false;</script>
 <script type="text/javascript">
 $('#gform').on('submit', function(e) {
-  $('#gform *').fadeOut(2000);
+  $('#gform *').fadeOut(1300);
   $('#gform').prepend('Your submission has been processed...');
   });
 </script>
-  </div>
-
-  </center>
+   </div>
+</center>
 
 
 

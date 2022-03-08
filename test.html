@@ -124,6 +124,13 @@ div {
   width: 500px;
 }
 
+h1{
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  color: black;
+  font-size: 17px;
+}
+
 </style>
 
 <title>Contact</title>
@@ -145,6 +152,7 @@ div {
 <center>
   <div>
     <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSesy4uxHnmwIpxVzuNdgXWzE5BjIXcOEuPGqhiOthqtCS3JZA/formResponse?usp=sf_link" target="hidden_iframe" onsubmit="submitted=true;">
+      <h1></h1>
       <label for="name">Name</label>
       <input type="text" id="entry.756196463" name="entry.756196463">
   
@@ -160,8 +168,9 @@ div {
 <script type="text/javascript">var submitted=false;</script>
 <script type="text/javascript">
 $('#gform').on('submit', function(e) {
-  $('#gform *').fadeOut(1300);
-  $('div').prepend('Your submission has been processed...');
+  $('#gform *').fadeOut(1000);
+  $('div').prepend('');
+  $('div').prepend("<h1>Your submission has been processed...</h1>");
   });
 </script>
    </div>
